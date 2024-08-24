@@ -1,12 +1,12 @@
 {% extends 'base_list.html' %}
 
 {% block 'titlt' %}
-    list Tracks
+    List Of Tracks
 {% endblock %}
 
 
 {% block 'header' %}
-    list tracks
+    List Of tracks
 {% endblock %}
 
 {% block 'table_headers' %}
@@ -17,8 +17,8 @@
 {% block 'table_body' %}
     {% for track in tracks %}
     <tr>
-        <td>{{track.id}}</td>
-        <td>{{track.track_name}}</td>
+        <td style="color:red">{{track.id}}</td>
+        <td style="color:red">{{track.track_name}}</td>
         <td>
             <a href="{%url 'update_track' track.id%}">Update</a>
             <a href="{%url 'delete_track' track.id%}">Delete</a>

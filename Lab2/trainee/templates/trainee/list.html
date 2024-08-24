@@ -1,12 +1,12 @@
 {% extends 'base_list.html' %}
 
 {% block 'titlt' %}
-    list trainee
+    List Trainees
 {% endblock %}
 
 
 {% block 'header' %}
-    list trainee
+    List Of Trainees
 {% endblock %}
 
 {% block 'table_headers' %}
@@ -24,15 +24,15 @@
 {% block 'table_body' %}
     {% for trainee in trainee_list %}
     <tr>
-        <td>{{trainee.trainee_id}}</td>
-        <td>{{trainee.first_name}}</td>
-        <td>{{trainee.last_name}}</td>
-        <td>{{trainee.gender}}</td>
-        <td>{{trainee.birth_data}}</td>
-        <td>{{trainee.address}}</td>
-        <td>{{trainee.phone}}</td>
-        <td>{{trainee.email}}</td>
-        <td>{{trainee.trackobj.track_name}}</td>
+        <td style="color:red">{{trainee.trainee_id}}</td>
+        <td style="color:red">{{trainee.first_name}}</td>
+        <td style="color:red">{{trainee.last_name}}</td>
+        <td style="color:red">{{trainee.gender}}</td>
+        <td style="color:red">{{trainee.birth_data}}</td>
+        <td style="color:red">{{trainee.address}}</td>
+        <td style="color:red">{{trainee.phone}}</td>
+        <td style="color:red">{{trainee.email}}</td>
+        <td style="color:red">{{trainee.trackobj.track_name}}</td>
         <td>
             <a href="{%url 'update_trainee' trainee.trainee_id%}">Update</a>
             <a href="{%url 'delete_trainee' trainee.trainee_id%}">Delete</a>
